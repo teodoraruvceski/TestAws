@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  shop-api:
+    build: ./shop-api
+    environment:
+      - PSP_URL=http://psp-api:4000
+    ports:
+      - "3000:3000"
+
+  psp-api:
+    build: ./psp-api
+    ports:
+      - "4000:4000"
